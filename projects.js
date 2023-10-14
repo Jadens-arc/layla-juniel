@@ -5,7 +5,7 @@ let projects = [
   },
   {
     "title": "Vibrant Voices",
-    "body": "A podcast I cohost that speaks on the experiences of UNR's most underrepresented groups.",
+    "body": "A podcast I host that speaks on the experiences of UNR's most underrepresented groups.",
     "links": [
       "https://www.vibrantvoicesunr.com/",
     ]
