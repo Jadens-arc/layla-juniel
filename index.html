@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Layla Juniel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="body container-lg">
+      <div class="row align-items-center">
+        <div class="col-sm-4">
+          <img class="rounded-circle mb-5 w-100 logo"  src="/logo.jpeg" alt=""/>
+        </div>
+        <div class="col-sm-8">
+          <h1>
+            <span class="fw-bold text-white" style="font-family: 'Major Mono Display', sans-serif; font-size: 4rem;">Layla Juniel</span>
+          </h1>
+          <h2 class="mb-5">
+            <span class="fw-bold text-white" style="font-family: 'Major Mono Display', sans-serif; font-size: 1.5rem;">(They/Them)</span>
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <h2 class="text-white">Contact Me</h2>
+          <ul class="list-group list-group-flush mb-4">
+            <li class="list-group-item">
+              <a class="link-light"ur
+                href="tel:702-418-8977" target="_blank">
+                (702) 418 - 8977
+              </a>
+            </li> <li class="list-group-item">
+              <a class="link-light" href="mailto:laylajuniel@gmail.com">
+                Laylajuniel@gmail.com
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a class="link-light" href="https://www.linkedin.com/in/layla-juniel-connect/">
+                On LinkedIn
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="/Layla Juniel.vcf" class="w-100 btn btn-light" target="_blank">Save Contact</a>
+            </li>
+          </ul>
+          <h2 class="text-white">Who Am I</h2>
+          <div>
+            <p>I am a full time student at the University of Nevada Reno majoring in Pharmacy and a devout membor of Delta Sigma Theta</p>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <h2 class="text-white">What I've Been Up To...</h2>
+          <div id="projects">
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="mt-5 pt-4  pt-md-4 border-top">
+      <p>
+      Designed By 
+        <a href="https://jadenarceneaux.com" target="_blank" class="link link-light">
+          Jaden Arceneaux 
+        </a>
+        🩷
+      </p>
+    </footer>
+    <script src="/projects.js" charset="utf-8">
+    </script>
+    <script charset="utf-8">
+      const projectsContainer = document.getElementById("projects");
+      projects.forEach(project => {
+        let newProject = document.createElement("div");
+        newProject.classList.add("card");
+        newProject.classList.add("mb-3");
+        projectsContainer.appendChild(newProject);
+
+        let newProjectBody = document.createElement("div");
+        newProjectBody.classList.add("card-body");
+        newProject.appendChild(newProjectBody);
+
+        let newProjectTitle = document.createElement("h5");
+        newProjectTitle.innerText = project.title;
+        newProjectTitle.classList.add("card-title");
+        newProjectBody.appendChild(newProjectTitle);
+
+        let newProjectText = document.createElement("p");
+        newProjectText.innerText = project.body;
+        newProjectText.classList.add("card-text");
+        newProjectText.classList.add("text-black");
+        newProjectBody.appendChild(newProjectText);
+
+        if (project.links) {
+          project.links.forEach(link => {
+            let newProjectText = document.createElement("a");
+            newProjectText.innerText = link;
+            newProjectText.href = link;
+            newProjectText.classList.add("card-text");
+            newProjectText.classList.add("link-dark");
+            newProjectText.classList.add("d-block");
+            newProjectBody.appendChild(newProjectText);
+          });
+        }
+      });
+    </script>
+
+  </body>
+</html>
